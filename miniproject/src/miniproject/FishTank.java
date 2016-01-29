@@ -9,7 +9,7 @@ public class FishTank{
 		
 		   
 		JFrame frame = new JFrame("Frame of Tank");
-	    frame.setSize(300, 200);
+	    frame.setSize(500, 400);
 	    frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		   
@@ -17,12 +17,14 @@ public class FishTank{
 		    
 		    Button b1=new Button("display"); 
 			Button b2=new Button("clear");
-			b1.setBounds(10,210,70,30);
+			b1.setBounds(30,40,70,30);
 			b2.setBounds(100,210,70,30);
 			
 			Panel pane1=new Panel();
-			
-			
+			pane1.setLayout(new GridBagLayout());
+		
+			 
+		
 			
 			Panel pane2=new Panel();
 			pane2.add(b1);
@@ -31,7 +33,7 @@ public class FishTank{
 			
 			
 			JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT,pane1,pane2);
-		   // splitPane.setOrientation();
+			splitPane.setResizeWeight(1.0);
 		
 		    frame.getContentPane().add(splitPane, BorderLayout.CENTER);
 		

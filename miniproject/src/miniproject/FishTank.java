@@ -2,6 +2,7 @@ package miniproject;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
+
 import javax.swing.*;
 
 public class FishTank{  
@@ -9,7 +10,7 @@ public class FishTank{
 		
 		   
 		JFrame frame = new JFrame("Frame of Tank");
-	    frame.setSize(500, 400);
+	    frame.setSize(800, 350);
 	    frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		   
@@ -20,9 +21,17 @@ public class FishTank{
 			b1.setBounds(30,40,70,30);
 			b2.setBounds(100,210,70,30);
 			
-			Panel pane1=new Panel();
-			pane1.setLayout(new GridBagLayout());
-		
+			Panel pane1=new Panel(new GridLayout(4,6));
+			//pane1.setLayout(new GridLayout(10,10));
+			//pane1.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
+
+		      for (int i =0; i<(4*6); i++){
+		          final JLabel label = new JLabel("Label");
+		          label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		          pane1.add(label);
+		      }
+		   
+		    
 			 
 		
 			

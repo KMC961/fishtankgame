@@ -10,7 +10,7 @@ public class FishTank{
 		
 		   
 		JFrame frame = new JFrame("Frame of Tank");
-	    frame.setSize(800, 350);
+	    frame.setSize(500, 150);
 	    frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		   
@@ -26,7 +26,7 @@ public class FishTank{
 			//pane1.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
 
 		      for (int i =0; i<(4*6); i++){
-		          final JLabel label = new JLabel("Label");
+		          final JLabel label = new JLabel(+(i+1)+"");
 		          label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		          pane1.add(label);
 		      }
